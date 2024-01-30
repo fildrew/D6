@@ -106,10 +106,10 @@
       const changePcontent = function () {
         const paragraph = document.querySelectorAll("div p");
         for (let i = 0; i < paragraph.length; i++) {
-          const p1 = paragraph[i]
-          paragraph[i].innerText = 'New Text';
+          const p1 = paragraph[i];
+          paragraph[i].innerText = "New Text";
         }
-      }
+      };
 
       changePcontent();
 
@@ -131,9 +131,10 @@
       */
 
       const addToTheSecond = function (element) {
-        const newElement = document.createElement("li");
-        newElement.innerText = element;
-        document.getElementById("SecondList").appendChild(newElement);
+        const li = document.createElement("li");
+        const ul = document.getElementById("secondList");
+        li.innerText = element;
+        ul.appendChild(li);
       };
 
       addToTheSecond("Brutta giornata");
@@ -176,13 +177,13 @@
         */
 
       const makeItClickable = function () {
-         const title  = document.querySelector("h1")
-          title.onclick =  function () {
-          title.innerText.slice(0,-1);
-          }
-        }
+        const title = document.querySelector("h1");
+        title.onclick = function () {
+          title.innerText.slice(0, -1);
+        };
+      };
 
-      makeItClickable()
+      makeItClickable();
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
@@ -209,9 +210,7 @@
         document.getElementById("tableArea").appendChild(table);
         const table1 = document.createElement("tr");
         document.querySelector("table").appendChild(table1);
-        const tableTitles = ["immagine","nome prodotto","quantità", "prezzo"];
-        
-
+        const tableTitles = ["immagine", "nome prodotto", "quantità", "prezzo"];
       };
 
       /* ESERCIZIO 12
