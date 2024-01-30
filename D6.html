@@ -94,7 +94,6 @@
 
       const addClassToTitle = function () {
         const h1 = document.querySelector("h1");
-        h1.classList.remove("class");
         h1.classList.add("myHeading");
       };
 
@@ -106,10 +105,11 @@
 
       const changePcontent = function () {
         const paragraph = document.querySelectorAll("div p");
-        for (let i = 0; i < paragraphs.length; i++) {
-          paragraph[i].innerText = "New Text";
+        for (let i = 0; i < paragraph.length; i++) {
+          const p1 = paragraph[i]
+          paragraph[i].innerText = 'New Text';
         }
-      };
+      }
 
       changePcontent();
 
@@ -204,7 +204,15 @@
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        const table = document.createElement("table");
+        document.getElementById("tableArea").appendChild(table);
+        const table1 = document.createElement("tr");
+        document.querySelector("table").appendChild(table1);
+        const tableTitles = ["immagine","nome prodotto","quantità", "prezzo"];
+        
+
+      };
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
