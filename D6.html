@@ -144,7 +144,7 @@
       */
 
       const addParagraph = function (paragraph) {
-        const div = document.querySelectorAll("div")[0]
+        const div = document.querySelectorAll("div")[0];
         const newParagraph = document.createElement("p");
         newParagraph.innerText = paragraph;
         div.appendChild(newParagraph);
@@ -167,12 +167,14 @@
         */
 
       const paintItGreen = function () {
-        const alluls = document.querySelectorAll("ul");
-        for (let i = 0; i < alluls.length; i++) {
-          alluls[i].style.backgroundColor("Green");
+        const listeUl = document.querySelectorAll("ul");
+        for (let i = 0; i < listeUl.length; i++) {
+          listeUl[i].style = "background-color:green";
         }
       };
+
       paintItGreen();
+
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
         */
