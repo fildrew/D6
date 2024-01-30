@@ -77,121 +77,159 @@
       </h3>
     </footer>
     <script>
-      /* ESERCIZIO 1
-       Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
-    */
-
-      const changeTitle = function () {
-        const title = document.querySelector("h1");
-        title.innerText = "Future";
-      };
-
-      changeTitle();
-
-      /* ESERCIZIO 2
-       Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
-    */
-
-      const addClassToTitle = function () {
-        const h1 = document.querySelector("h1");
-        h1.classList.remove("class");
-        h1.classList.add("myHeading");
-      };
-
-      addClassToTitle();
-
-      /* ESERCIZIO 3
-       Scrivi una funzione che cambi il testo dei p figli di un div
+        /* ESERCIZIO 1
+         Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
       */
 
-      const changePcontent = function () {
-        const paragraph = document.querySelectorAll("div p");
-        for (let i = 0; i < paragraphs.length; i++) {
-          paragraph[i].innerText = "New Text";
-        }
-      };
+        const changeTitle = function () {
+          const title = document.querySelector("h1");
+          title.innerText = "Future";
+        };
 
-      changePcontent();
+        changeTitle();
 
-      /* ESERCIZIO 4
-       Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+        /* ESERCIZIO 2
+         Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
       */
 
-      const changeUrls = function () {
-        const footerlinks = document.querySelectorAll("a:not(footer a)");
-        for (let i = 0; i < footerlinks; i++) {
-          footerlinks[i].href = "https://www.google.com";
-        }
-      };
+        const addClassToTitle = function () {
+          const h1 = document.querySelector("h1");
+          h1.classList.remove("class");
+          h1.classList.add("myHeading");
+        };
 
-      changeUrls();
+        addClassToTitle();
 
-      /* ESERCIZIO 5
-       Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
-    */
+        /* ESERCIZIO 3
+         Scrivi una funzione che cambi il testo dei p figli di un div
+        */
 
-      const addToTheSecond = function () {
-        const newElement = document.createElement("li");
-        newElement.innerText = element;
-        document.getElementById("SecondList").appendChild(newElement);
-      };
+        const changePcontent = function () {
+          const paragraph = document.querySelectorAll("div p");
+          for (let i = 0; i < paragraphs.length; i++) {
+            paragraph[i].innerText = "New Text";
+          }
+        };
 
-      addToTheSecond("Brutta giornata");
+        changePcontent();
 
-      /* ESERCIZIO 6
-       Scrivi una funzione che aggiunga un paragrafo al primo div
-    */
+        /* ESERCIZIO 4
+         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+        */
 
-      const addParagraph = function () {};
+        const changeUrls = function () {
+          const footerlinks = document.querySelectorAll("a:not(footer a)");
+          for (let i = 0; i < footerlinks; i++) {
+            footerlinks[i].href = "https://www.google.com";
+          }
+        };
 
-      /* ESERCIZIO 7
-       Scrivi una funzione che faccia scomparire la prima lista non ordinata
-    */
+        changeUrls();
 
-      const hideFirstUl = function () {};
-
-      /* ESERCIZIO 8 
-       Scrivi una funzione che renda verde il background di ogni lista non ordinata
+        /* ESERCIZIO 5
+         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
       */
 
-      const paintItGreen = function () {};
+        const addToTheSecond = function (element) {
+          const newElement = document.createElement("li");
+          newElement.innerText = element;
+          document.getElementById("SecondList").appendChild(newElement);
+        };
 
-      /* ESERCIZIO 9
-       Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
+        addToTheSecond("Brutta giornata");
+
+        /* ESERCIZIO 6
+         Scrivi una funzione che aggiunga un paragrafo al primo div
       */
 
-      const makeItClickable = function () {};
+        const addParagraph = function (paragraph) {
+          const newParagraph = document.createElement("p");
+          newParagraph.innerText = paragraph;
+          document.querySelector("div").appendChild(newParagraph);
+        };
 
-      /* ESERCIZIO 10
-       Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
+        addParagraph("Bella giornata")
+
+        /* ESERCIZIO 7
+         Scrivi una funzione che faccia scomparire la prima lista non ordinata
       */
 
-      const revealFooterLink = function () {};
+        const hideFirstUl = function () {
+          const ul = document.getElementById("firstlist");
+          ul.remove()
+        };
 
-      /* ESERCIZIO 11
-       Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
-       La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
-    */
+        hideFirstUl();
+        /* ESERCIZIO 8
+         Scrivi una funzione che renda verde il background di ogni lista non ordinata
+        */
 
-      const generateTable = function () {};
+        const paintItGreen = function () {
+            const alluls = document.querySelectorAll("ul")
+            for (let i = 0; i <  alluls.length; i++) {
+            alluls[i].style.backgroundColor("Green");
+          }
+        };
+        paintItGreen ();
+        /* ESERCIZIO 9
+         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
+        */
 
-      /* ESERCIZIO 12
-       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-    */
+        //const makeItClickable = function () {
+         // const title  = document.querySelector("h1")
+          //title.onclick =  function () {
+        //   title.classList.slice(0,-1);
+         // }
 
-      const addRow = function () {};
+       // }
 
-      /* ESERCIZIO 14
-      Crea una funzione che nasconda le immagini della tabella quando eseguita
-    */
+        //makeItClickable()
+        /* ESERCIZIO 10
+         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
+        */
 
-      const hideAllImages = function () {};
+        const revealFooterLink = function () {
+          const footer1 = document.querySelector("footer")
+          footer1.style.cursor = "pointer";
+          footer1.onclick = function () {
+            const link = document.querySelector( "footer a")
+            const url = 
 
-      /* EXTRA ESERCIZIO 15
-      Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
-    */
+            alert(url)
+          }
+        
+        };
 
-      const changeColorWithRandom = function () {};
+        revealFooterLink()
+        /* ESERCIZIO 11
+         Crea una funzione che crei una tabella nell'elemento con id "tableArea".
+         La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+      */
+
+        const generateTable = function () {};
+
+        /* ESERCIZIO 12
+         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+      */
+
+        const addRow = function () {};
+
+        /* ESERCIZIO 14
+        Crea una funzione che nasconda le immagini della tabella quando eseguita
+      */
+
+        const hideAllImages = function () {
+          const imgs = document.querySelectorAll("img")
+          for ( let i = 0; i < imgs.length; i ++) {
+            imgs[i].classList.add();
+          }
+        };
+
+        /* EXTRA ESERCIZIO 15
+        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+      */
+
+        const changeColorWithRandom = function () {};
     </script>
   </body>
 </html>
