@@ -144,9 +144,10 @@
       */
 
       const addParagraph = function (paragraph) {
+        const div = document.querySelectorAll("div")[0]
         const newParagraph = document.createElement("p");
         newParagraph.innerText = paragraph;
-        document.querySelector("div").appendChild(newParagraph);
+        div.appendChild(newParagraph);
       };
 
       addParagraph("Bella giornata");
