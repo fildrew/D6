@@ -180,9 +180,9 @@
         */
 
       const makeItClickable = function () {
-        const title = document.querySelector("h1");
-        title.onclick = function () {
-          title.innerText.slice(0, -1);
+        const h1 = document.querySelector("h1");
+        h1.onclick = function () {
+          h1.innerText = h1.innerText.slice(0, -1);
         };
       };
 
